@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SevenSkies</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+    <h1>Day</h1>
+    <h1>Temperature</h1>
+    <h1>Weather</h1>
+</div>
+      <div class="container">
+          <div class="day">
+           {% for day in days[7:-1] %}
+              <div class="day">{{ day.get_text() }}</div>
+          {% endfor %}
+        </div>
+            <div class="temperature">
+              {% for tem  in temperature_list %}
+                <div class="day">{{tem}} </div>
+              {% endfor %}
+               </div>
+            <div class="day">
+                {% for weather in weather_list %}
+                  <div class="day">{{weather}}</div>
+                {% endfor %}
+                </div>
+       </div>
+        </div>
+</body>
+
+<!--#________________________________________________________________________________-->
+<!--              <li>{{temperature_list[2]}}</li>-->
+<!--             <li>{{temperature_list[14]}}</li>-->
+<!--             <li>{{temperature_list[26]}}</li>-->
+<!--             <li>{{temperature_list[38]}}</li>-->
+<!--             <li>{{temperature_list[50]}}</li>-->
+<!--             <li>{{temperature_list[62]}}</li>-->
+<!--             <li>{{temperature_list[74]}}</li>-->
+
+
